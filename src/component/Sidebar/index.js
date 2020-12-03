@@ -10,10 +10,10 @@ import {
 } from './SidebarElement';
 
 
-function index() {
+function Index({isOpen, toggle}) {
     return (
-        <SidebarContainer>
-            <Icon>
+        <SidebarContainer isOpen={isOpen} onClick={toggle}>
+            <Icon onClick={toggle}>
                 <CloseIcon />
             </Icon>
             <SidebarMenu>
@@ -28,4 +28,4 @@ function index() {
     );
 };
 
-export default index
+export default Index
